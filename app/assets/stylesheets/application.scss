@@ -1,0 +1,172 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require sweetalert
+ *= require_tree .
+ *= require simple_calendar
+
+ */
+/* navbar*/
+
+.custom-navbar{
+  box-shadow: 10px 10px 10px #eee; 
+  background-color: #EBa318;
+}
+
+.navbar-link{
+  color: green!important;
+  padding-left:5px;
+  padding-right:5px;
+}
+.navbar-link:hover{
+  color: white!important;
+  font-weight:bold;
+}
+
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(247,32,78);
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247,32,78, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler .navbar-toggler-icon{
+  width: 18px!important;
+}
+.custom-toggler:hover{
+  border-color: rgb(255,255,255); background-color: #f76a88;
+}
+.navbar-toggler-icon:hover{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  
+
+
+//chackout 
+
+ .wizard  .nav-tabs > li.active > a::after, .wizard .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #5a4080 none repeat scroll 0% 0%; color: #fff; }
+.tab-pane { padding: 0px 0; }
+
+
+.wizard .nav-tabs > li  {width:5%; text-align:center;}
+
+/* check out */
+.breadcrumb_checkout { 
+  list-style: none; 
+  overflow: hidden; 
+  margin: 40px;
+  padding: 0;
+}
+.breadcrumb_checkout li { 
+  float: left; 
+}
+.breadcrumb_checkout li a {
+  color: white;
+  text-decoration: none; 
+  padding: 8px 0 8px 55px;
+  background: brown; /* fallback color */
+  background-color: #60ab59;
+  position: relative; 
+  display: block;
+  float: left;
+}
+@media (min-width: 768px) {
+.breadcrumb_checkout li a:after { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid  #60ab5973;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  left: 100%;
+  z-index: 2; 
+}   
+.breadcrumb_checkout li a:before { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  margin-left:0px;
+  left: 100%;
+  z-index: 1; 
+}   
+.breadcrumb_checkout li.active a:after 
+    {
+        content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid  #60ab59;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  left: 100%;
+  z-index: 2; 
+    }
+}
+.breadcrumb_checkout li:first-child a {
+  padding-left: 10px;
+}
+
+.breadcrumb_checkout li.active
+{
+    background:        #60ab59;
+    color: #fff;
+}
+.breadcrumb_checkout li a
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout li a:hover
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout li a:visited
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout li a:focus
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout>li.disabled>a:hover {
+    background:        #60ab5973;
+    color: #fff;
+    }
+    .breadcrumb_checkout>li.disabled>a:visited {
+    background:        #60ab5973;
+    color: #fff;
+    }
+    .breadcrumb_checkout>li.disabled>a:focus {
+    background:        #60ab5973;
+    color: #fff;
+    }
+
+    

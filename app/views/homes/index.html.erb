@@ -1,0 +1,22 @@
+
+
+<ul class="nav ">
+  <li class="active"><a data-toggle="tab" href="#">Men's Outewear</a></li>
+  <li><a data-toggle="tab" href="#menu1">Ladies Outewear</a></li>
+  <li><a data-toggle="tab" href="#menu2">Men's T_shirts</a></li>
+  <li><a data-toggle="tab" href="#menu3">Ladies T_shirts</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <%=render 'products/mens_Outewear'%>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+    <%=render 'products/ladies_Outewear'%>
+  </div>
+  <div id="menu2" class="tab-pane fade">
+    <%=render 'products/mens_tshirts'%>
+  </div>
+  <div id="menu3" class="tab-pane fade">
+    <%=render 'products/ladies_tshirts'%>
+  </div>

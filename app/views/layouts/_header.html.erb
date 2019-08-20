@@ -1,0 +1,27 @@
+<nav class="navbar fixed-top navbar-expand-md custom-navbar navbar-dark">
+    <%= image_tag("logo.png", class: "navbar-brand logo_custom",style:"width:10%; height:1%")%>
+
+    <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon "></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto  float-right">
+       <% if user_signed_in? %>
+             <strong class="navbar-link"><%= current_user.email %></strong>|
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => ' navbar-link ' %> |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
+
+             <%= link_to "Admin", new_admin_user_session_path, :class => 'navbar-link'  %>
+         <% end %>
+      </ul>
+    </div>  
+</nav>
+ <script async src="https://cse.google.com/cse.js?cx=015032762137690090718:bqvqpas5o2w"></script>
+ <div class="gcse-search"></div>
+
+
+

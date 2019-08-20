@@ -1,0 +1,11 @@
+
+ <div class="card-footer like_list ">
+  <% pre_like = product.likes.find { |like| like.user_id == current_user.id } %>
+  <% if pre_like %>
+    <%= link_to ' ', product_like_path(product, pre_like), method: :delete ,class: "text-right fa fa-thumbs-down" %>
+  <% else %>
+     <%= link_to ' ', product_likes_path(product), method: :post ,class: "text-right fa fa-thumbs-up",remote: :true %>
+  <% end %>
+  <span> <%= product.likes.count %> <%= (product.likes.count) == 1 ? 'Like' : 'Likes' %></span>
+  <%= link_to 'View' ,product_path(product),class: "float-right" %>
+</div>

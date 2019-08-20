@@ -1,0 +1,19 @@
+
+<div class="row container mb-5">
+  <div class="col col-sm-6">
+    <%=image_tag @product.pimage_url ,class: "card-img-top1 float-right ",style: "height:50%; width:60%;" %>  
+  </div>
+  <div class="col col-sm-6 pl-5 ">
+    <h2><%=@product.name%></h2><hr>
+    <div><h5>Price : <%=@product.price %></h5></div><hr>
+    <span>Size</span>
+    <%= select_tag "colors", raw("<option>L</option><option>M</option><option>XL</option>"),style: "width:82%;height:10%; border:none; background-color:white; padding-left:20px; margin-left:5%;" %><br><hr>
+    <%= form_tag user_orders_path(@user), :method => :post do  %>
+      <span>Quantity</span>
+      <%= hidden_field_tag "product_id", @product.id %>
+      <%= select_tag "quantity", raw("<option>1</option><option>2</option><option>3</option>"),style: "width:82%; height:10%; border:none; background-color:white; padding-left:20px;" %><br><hr> 
+      <div><h5>Discription : <%=@product.desc %></h5></div><hr>
+      <%= submit_tag "Add To Cart", :class => 'btn btn-success float-right mr-5' %>
+    <% end %>
+  </div>
+</div>

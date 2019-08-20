@@ -1,0 +1,23 @@
+
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h3 class="text-center pb-6">Product</h3>
+    <div class="form-group">
+      <%=form_for @product  do |s|%>
+        <%=s.label :Poduct%>
+        <%=s.text_field :name,class: "form-control"%>
+
+        <%=s.label :Description%>
+        <%=s.text_field :desc,class: "form-control"%>
+
+        <%=s.label :Price%>
+        <%=s.text_field :price,class: "form-control"%><br>
+
+        <%= s.label :Image%><br>
+        <%= s.file_field :pimage %><br>
+        <%= s.submit nil  , :class => 'btn btn-primary ' %>  <%end%>
+    </div>
+  </div>
+  <div class="col-sm-3"> </div>
+</div>

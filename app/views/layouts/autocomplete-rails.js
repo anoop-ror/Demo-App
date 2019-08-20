@@ -1,0 +1,1 @@
+autocomplete-rails.js
